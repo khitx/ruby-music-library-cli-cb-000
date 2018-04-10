@@ -37,8 +37,10 @@ class Artist
 #    unless self.songs.include?(song)
 #      self.songs << song
 #    end
+#or
     song.artist = self unless song.artist
     songs << song unless songs.include?(song)
+#end or
   end
 
   def genres
