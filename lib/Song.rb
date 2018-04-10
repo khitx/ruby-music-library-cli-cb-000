@@ -46,13 +46,13 @@ class Song
     song
   end
 
-  #def self.find_by_name(song_name)
-  #  self.all.detect { |s| s.name == song_name  }
-  #end
+  def self.find_by_name(song_name)
+    self.all.detect { |s| s.name == song_name  }
+  end
 
-  #def self.find_or_create_by_name(song_name)
-  #  self.find_by_name(song_name) || self.create(song_name)
-  #end
+  def self.find_or_create_by_name(song_name)
+    self.find_by_name(song_name) || self.create(song_name)
+  end
 
   def self.new_from_filename(filename)
     artist_name, song_name, genre_name = filename.split(" - ")
