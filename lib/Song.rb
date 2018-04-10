@@ -59,7 +59,7 @@ class Song
 ##binding.pry
    #artist = Artist.new(artist_name)
    #artist = Artist.create(artist_name)
-    artist = find_or_create_by_name(artist_name)
+    artist = Artist.find_or_create_by_name(artist_name)
 ##binding.pry
    #genre = Genre.new(genre_name.slice(0..-5))
    genre = Genre.create(genre_name.slice(0..-5))
