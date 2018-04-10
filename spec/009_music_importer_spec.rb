@@ -69,7 +69,7 @@ describe "Song" do
 end
 
 describe "MusicImporter" do
-  xdescribe "#import" do
+  describe "#import" do
     let(:music_importer) { MusicImporter.new("./spec/fixtures/mp3s") }
 
     it "imports the files into the library by invoking Song.create_from_filename" do
