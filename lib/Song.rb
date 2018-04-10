@@ -1,6 +1,4 @@
 class Song
-  #extend Concerns::Findable::ClassMethods
-  #include Concerns::Findable::InstanceMethods
   extend Concerns::Findable
 
   attr_accessor :name
@@ -15,7 +13,6 @@ class Song
     if genre != nil
       self.genre = genre
     end
-    #save
   end
 
   def genre=(genre)
@@ -61,8 +58,8 @@ class Song
     artist_name, song_name, genre_name = filename.split(" - ")
 ##binding.pry
    #artist = Artist.new(artist_name)
-   artist = Artist.create(artist_name)
-    #artist = find_or_create_by_name(artist_name)
+   #artist = Artist.create(artist_name)
+    artist = find_or_create_by_name(artist_name)
 ##binding.pry
    #genre = Genre.new(genre_name.slice(0..-5))
    genre = Genre.create(genre_name.slice(0..-5))
